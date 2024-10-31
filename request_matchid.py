@@ -10,7 +10,8 @@ def get_matchid(_PUUID, ):
     API_KEY   = os.getenv("YOUR_API_KEY")
     PUUID = _PUUID
     start_time_string =  "2021-06-16 00:00:00"  # First match time to list output (minimum = 2021-06-16 00:00:00)
-    end_time_string = "2024-10-31 00:00:00"     # Time specification of endpoints (Maximum = today)
+    dt = datetime.today() 
+    end_time_string = f"{dt.year}-{dt.month}-{dt.day} 00:00:00"     # Time specification of endpoints (Maximum = today)
     INQUEUE_TYPE = "normal"
     START_INDEX = 0
     COUNT = 10
